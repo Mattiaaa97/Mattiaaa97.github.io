@@ -1,84 +1,226 @@
-<!-- Featured Projects -->
-      <section class="section-container" id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        
-        <div class="projects-grid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mattia Dellanoce - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg-color: #0b192f;
+      --card-bg: #112240;
+      --text-main: #ccd6f6;
+      --text-muted: #8892b0;
+      --accent: #64ffda;
+      --tag-bg: #1d3557;
+      --tag-text: #a8b2d1;
+    }
 
-          <!-- 1. Applied Cryptography & Attack Simulation Engine -->
-          <div class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">Applied Cryptography & Attack Simulation Engine</h3>
-              <a href="https://github.com/Mattiaaa97/Python-Learning-Journey/tree/main/Progetto-ML" class="project-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-            <p class="project-description">
-              Cryptographic attack simulation, telemetry ingestion, and classification pipeline using Scikit-learn and NumPy with &gt;85% detection accuracy.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Applied Cryptography</span>
-              <span class="tag">Attack Modeling</span>
-            </div>
-          </div>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-          <!-- 2. AWS S3 Leaf Data Pipeline -->
-          <div class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">AWS S3 Leaf Data Pipeline</h3>
-              <a href="https://github.com/Mattiaaa97/aws-s3-leaf-data-pipeline-" class="project-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-            <p class="project-description">
-              Cloud data engineering pipeline validating GPS and sensor telemetry into SQLite, syncing clean data to Amazon S3 via Boto3, and scoring health with Random Forest.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">AWS S3</span>
-              <span class="tag">Boto3</span>
-              <span class="tag">Data Pipeline</span>
-            </div>
-          </div>
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
 
-          <!-- 3. Industrial Defect Classifier -->
-          <div class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">Industrial Defect Classifier</h3>
-              <a href="https://github.com/Mattiaaa97/Industrial-defect-classifier" class="project-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-            <p class="project-description">
-              End-to-end computer vision tool and automated quality inspection engine identifying surface flaws and structural defects on manufacturing components.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Quality Inspection</span>
-            </div>
-          </div>
+    .container {
+      max-width: 900px;
+      width: 100%;
+    }
 
-          <!-- 4. Credit Risk Evaluator -->
-          <div class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">Credit Risk Evaluator (Credit Scoring)</h3>
-              <a href="https://github.com/Mattiaaa97/Credit-Risk-Evaluator-Credit-Scoring-ML-" class="project-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-            <p class="project-description">
-              Automated credit risk assessment and loan decision engine leveraging feature encoding, standard scaling, and Random Forest classification for loan approvals.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Scikit-learn</span>
-              <span class="tag">FinTech</span>
-              <span class="tag">Predictive Modeling</span>
-            </div>
-          </div>
+    .intro-box {
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.2rem;
+      background: rgba(17, 34, 64, 0.5);
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 2.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
 
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-header h3 {
+      font-size: 1.15rem;
+      color: #ffffff;
+      font-weight: 600;
+      padding-right: 1rem;
+    }
+
+    .project-header a {
+      color: #a8b2d1;
+      font-size: 1.3rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .project-header a:hover {
+      color: var(--accent);
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background-color: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.75rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="intro-box">
+      Junior Software Developer specialized in Python, Artificial Intelligence, and Cloud computing. Combines strong data engineering foundations with practical experience building ML pipelines, backend automation systems, and scalable database architectures.
+    </div>
+
+    <h2 class="section-title">Featured Projects</h2>
+    
+    <div class="projects-grid">
+
+      <!-- Progetto 1: Applied Cryptography -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Applied Cryptography &amp; Attack Simulation Engine</h3>
+          <a href="https://github.com/Mattiaaa97/Python-Learning-Journey/tree/main/Progetto-ML" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
-      </section>
+        <p class="project-desc">
+          Cryptographic attack simulation, telemetry ingestion, and classification pipeline using Scikit-learn and NumPy with &gt;85% detection accuracy.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Applied Cryptography</span>
+          <span class="tag">Attack Modeling</span>
+        </div>
+      </div>
+
+      <!-- Progetto 2: AWS S3 Leaf Data Pipeline -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>AWS S3 Leaf Data Pipeline</h3>
+          <a href="https://github.com/Mattiaaa97/aws-s3-leaf-data-pipeline-" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <p class="project-desc">
+          Cloud data engineering pipeline validating GPS and sensor telemetry into SQLite, syncing clean data to Amazon S3 via Boto3, and scoring health with Random Forest.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">AWS S3</span>
+          <span class="tag">Boto3</span>
+          <span class="tag">Data Pipeline</span>
+        </div>
+      </div>
+
+      <!-- Progetto 3: Industrial Defect Classifier -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Industrial Defect Classifier</h3>
+          <a href="https://github.com/Mattiaaa97/Industrial-defect-classifier" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <p class="project-desc">
+          End-to-end computer vision tool and automated quality inspection engine identifying surface flaws and structural defects on manufacturing components.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Quality Inspection</span>
+        </div>
+      </div>
+
+      <!-- Progetto 4: Credit Risk Evaluator -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Credit Risk Evaluator (Credit Scoring)</h3>
+          <a href="https://github.com/Mattiaaa97/Credit-Risk-Evaluator-Credit-Scoring-ML-" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <p class="project-desc">
+          Automated credit risk assessment and loan decision engine leveraging feature encoding, standard scaling, and Random Forest classification for loan approvals.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">FinTech</span>
+          <span class="tag">Predictive Modeling</span>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      &copy; 2026 Mattia Dellanoce &bull; Built with GitHub Pages
+    </footer>
+  </div>
+
+</body>
+</html>
