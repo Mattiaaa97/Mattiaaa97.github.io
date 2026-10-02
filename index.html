@@ -1,106 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mattia Dellanoce | Junior Python & AI Developer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-      --primary: #0b192f;
-      --secondary: #172a45;
-      --accent: #4682d2;
-      --text: #ccd6f6;
-      --text-muted: #8892b0;
-      --bg: #0a192f;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 40px 20px; }
-    .container { max-width: 900px; margin: 0 auto; }
-    header { text-align: center; margin-bottom: 50px; }
-    h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
-    .subtitle { font-size: 1.2rem; color: var(--accent); margin-bottom: 15px; }
-    .links a { color: var(--text); margin: 0 10px; font-size: 1.3rem; text-decoration: none; transition: 0.3s; }
-    .links a:hover { color: var(--accent); }
-    .section-title { font-size: 1.5rem; color: #fff; border-bottom: 2px solid var(--secondary); padding-bottom: 8px; margin: 40px 0 20px; }
-    .card { background: var(--secondary); border-radius: 8px; padding: 25px; margin-bottom: 20px; border-left: 4px solid var(--accent); }
-    .card h3 { color: #fff; display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 1.2rem; }
-    .card h3 a { color: var(--accent); text-decoration: none; }
-    .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 10px; }
-    .tags span { display: inline-block; background: rgba(70, 130, 210, 0.15); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; margin-right: 6px; margin-top: 5px; }
-    footer { text-align: center; margin-top: 60px; color: var(--text-muted); font-size: 0.85rem; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>Mattia Dellanoce</h1>
-      <p class="subtitle">Junior Python & AI Developer | AWS Certified Cloud Practitioner</p>
-      <div class="links">
-        <a href="https://github.com/Mattiaaa97" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/mattia-dellanoce-11b575218" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:mattia.dellanoce.dev@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      </div>
-    </header>
+      <!-- Featured Projects -->
+      <section class="section-container" id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <div class="projects-grid">
 
-    <h2 class="section-title">About Me</h2>
-    <div class="card" style="border-left-color: #64ffda;">
-      <p style="color: var(--text);">
-        Junior Software Developer specialized in Python, Artificial Intelligence, and Cloud computing. 
-        Combines strong data engineering foundations with practical experience building ML pipelines, 
-        backend automation systems, and scalable database architectures.
-      </p>
-    </div>
+          <!-- 1. Applied Cryptography & Attack Simulation Engine -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Applied Cryptography & Attack Simulation Engine</h3>
+              <a href="https://github.com/Mattiaaa97/Python-Learning-Journey/tree/main/Progetto-ML" class="project-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <p class="project-description">
+              Cryptographic attack simulation, telemetry ingestion, and classification pipeline using Scikit-learn and NumPy with &gt;85% detection accuracy.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Applied Cryptography</span>
+              <span class="tag">Attack Modeling</span>
+            </div>
+          </div>
 
-    <h2 class="section-title">Featured Projects</h2>
+          <!-- 2. AWS S3 Leaf Data Pipeline -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">AWS S3 Leaf Data Pipeline</h3>
+              <a href="https://github.com/Mattiaaa97/aws-s3-leaf-data-pipeline-" class="project-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <p class="project-description">
+              Cloud data engineering pipeline validating GPS and sensor telemetry into SQLite, syncing clean data to Amazon S3 via Boto3, and scoring health with Random Forest.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">AWS S3</span>
+              <span class="tag">Boto3</span>
+              <span class="tag">Data Pipeline</span>
+            </div>
+          </div>
 
-    <div class="card">
-      <h3>
-        Applied Cryptography & Attack Simulation Engine
-        <a href="https://github.com/Mattiaaa97/Python-Learning-Journey/tree/main/Progetto-ML" target="_blank"><i class="fab fa-github"></i></a>
-      </h3>
-      <p>Cryptographic attack simulation, telemetry ingestion, and classification pipeline using Scikit-learn and NumPy with >85% detection accuracy.</p>
-      <div class="tags">
-        <span>Python</span><span>Machine Learning</span><span>Applied Cryptography</span><span>Attack Modeling</span>
-      </div>
-    </div>
+          <!-- 3. Industrial Defect Classifier -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Industrial Defect Classifier</h3>
+              <a href="https://github.com/Mattiaaa97/Industrial-defect-classifier" class="project-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <p class="project-description">
+              End-to-end computer vision tool and automated quality inspection engine identifying surface flaws and structural defects on manufacturing components.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Quality Inspection</span>
+            </div>
+          </div>
 
-    <div class="card">
-      <h3>
-        CourierSystem Logistics Engine
-        <a href="https://github.com/Mattiaaa97/Python-journey-2024/tree/main/10_Progetto_CourierSystem" target="_blank"><i class="fab fa-github"></i></a>
-      </h3>
-      <p>Object-Oriented backend platform with custom exception handling to automate parcel load allocation and shipment routing.</p>
-      <div class="tags">
-        <span>Python</span><span>OOP</span><span>Logistics</span><span>Clean Architecture</span>
-      </div>
-    </div>
+          <!-- 4. Credit Risk Evaluator -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Credit Risk Evaluator (Credit Scoring)</h3>
+              <a href="https://github.com/Mattiaaa97/Credit-Risk-Evaluator-Credit-Scoring-ML-" class="project-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <p class="project-description">
+              Automated credit risk assessment and loan decision engine leveraging feature encoding, standard scaling, and Random Forest classification for loan approvals.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">FinTech</span>
+              <span class="tag">Predictive Modeling</span>
+            </div>
+          </div>
 
-    <div class="card">
-      <h3>
-        Warehouse Management System
-        <a href="https://github.com/Mattiaaa97/Python-journey-2024/tree/main/11_Progetto_WarehouseManage" target="_blank"><i class="fab fa-github"></i></a>
-      </h3>
-      <p>Automated inventory management system with file persistence and configurable stock replenishment triggers.</p>
-      <div class="tags">
-        <span>Python</span><span>Data Persistence</span><span>Automation</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>
-        High-Throughput Data Engine & Python Suite
-        <a href="https://github.com/Mattiaaa97/Python-journey-2024" target="_blank"><i class="fab fa-github"></i></a>
-      </h3>
-      <p>Custom SQLite engine (<tt>DataManager</tt>) parsing 10,000+ raw records implementing Chain of Responsibility, Memento, and Iterator patterns.</p>
-      <div class="tags">
-        <span>SQLite</span><span>Design Patterns</span><span>Advanced Python</span>
-      </div>
-    </div>
-
-    <footer>
-      <p>© 2026 Mattia Dellanoce • Built with GitHub Pages</p>
-    </footer>
-  </div>
-</body>
-</html>
+        </div>
+      </section>
